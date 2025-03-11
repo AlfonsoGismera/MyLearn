@@ -1,0 +1,19 @@
+# Archivo .gitattributes
+
+# Indica que todos los archivos con extensión .sh deben ser tratados como texto
+*.sh text
+
+# Indica que todos los archivos con extensión .sh deben usar finales de línea LF (Line Feed)
+*.sh eol=lf
+
+# (Opcional) Indica que todos los archivos con extensión .txt deben usar finales de línea CRLF (Carriage Return + Line Feed)
+# *.txt text eol=crlf
+
+# (Opcional) Indica que todos los archivos con extensión .jpg deben ser tratados como archivos binarios
+# *.jpg binary
+
+# (Opcional) Indica que todos los archivos con extensión .png deben ser tratados como archivos binarios
+# *.png binary
+
+# (Opcional) Indica que todos los archivos en la carpeta "build" deben ser tratados como archivos binarios
+# build/* binary
