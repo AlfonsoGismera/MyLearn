@@ -6,7 +6,6 @@ Se centra en el desarrollo de aplicaciones web de una sola página (SPA) mediant
 Componentización: Facilita el mantenimiento y la escalabilidad.
 Virtual DOM: Optimiza las actualizaciones del DOM real, mejorando el rendimiento.
 Comunidad y ecosistema: Amplia cantidad de librerías y herramientas adicionales.
-# Resumen Técnico de React
 
 ## 1. Virtual DOM y Reconciliación
 
