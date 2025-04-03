@@ -1,0 +1,187 @@
+/* Estilos globales */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal de la aplicación */
+.App {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Título */
+h1 {
+  color: #333;
+}
+
+/* Input y botón para agregar tareas */
+.todo-input {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.input-todo {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-add {
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  background-color: #09ab6a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-add:hover {
+  background-color: #078e5b;
+}
+
+/* Filtro de tareas */
+.todo-filter {
+  margin-bottom: 1rem;
+}
+
+.filter-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Lista de tareas */
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+.todo-text {
+  flex: 1;
+  cursor: pointer;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Botones de acciones en cada tarea */
+.todo-buttons button {
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-edit {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.btn-edit:hover {
+  background-color: #e0a800;
+}
+
+.btn-remove {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.btn-remove:hover {
+  background-color: #ff3b3b;
+}
+
+/* Estilos para el Modal de edición */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-save {
+  background-color: #09ab6a;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-save:hover {
+  background-color: #078e5b;
+}
+
+.btn-cancel {
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-cancel:hover {
+  background-color: #ff3b3b;
+}
