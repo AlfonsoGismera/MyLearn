@@ -47,36 +47,36 @@ const target = 20;
 */
 
 const closestPairDiff = (arr, target) => {
-    if (!arr || arr.length < 2) {
-      return Infinity;
+  if (!arr || arr.length < 2) {
+    return Infinity;
+  }
+
+  arr.sort((a, b) => a - b);
+
+  const findClosest = (left, right, minDiff) => {
+    if (left >= right) {
+      return minDiff;
     }
-  
-    arr.sort((a, b) => a - b);
-  
-    const findClosest = (left, right, minDiff) => {
-      if (left >= right) {
-        return minDiff;
-      }
-  
-      const sum = arr[left] + arr[right];
-      const diff = Math.abs(sum - target);
-  
-      const newMinDiff = Math.min(minDiff, diff);
-  
-      if (sum < target) {
-        return findClosest(left + 1, right, newMinDiff);
-      } else if (sum > target) {
-        return findClosest(left, right - 1, newMinDiff);
-      } else {
-        return 0; // Encontramos una suma exacta
-      }
-    };
-  
-    return findClosest(0, arr.length - 1, Infinity);
+
+    const sum = arr[left] + arr[right];
+    const diff = Math.abs(sum - target);
+
+    const newMinDiff = Math.min(minDiff, diff);
+
+    if (sum < target) {
+      return findClosest(left + 1, right, newMinDiff);
+    } else if (sum > target) {
+      return findClosest(left, right - 1, newMinDiff);
+    } else {
+      return 0; // Encontramos una suma exacta
+    }
   };
-  
-  // Tests
-  console.log(closestPairDiff([3, 8, 12, 5, 1], 15)); // output: 0
-  console.log(closestPairDiff([2, 9, 14, 7], 20)); // output: 1
-  console.log(closestPairDiff([-10, -5, 0, 5, 10], 3)); // output: 2
-  console.log(closestPairDiff([1, 1, 1, 1, 1], 100)); // output: 98
+
+  return findClosest(0, arr.length - 1, Infinity);
+};
+
+// Tests
+console.log(closestPairDiff([3, 8, 12, 5, 1], 15)); // output: 0
+console.log(closestPairDiff([2, 9, 14, 7], 20)); // output: 1
+console.log(closestPairDiff([-10, -5, 0, 5, 10], 3)); // output: 2
+console.log(closestPairDiff([1, 1, 1, 1, 1], 100)); // output: 98
